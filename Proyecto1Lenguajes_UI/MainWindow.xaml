@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto1Lenguajes_UI"
         mc:Ignorable="d"
-        Title="Estadio Nacional" Height="450" Width="800">
+        Title="Estadio Nacional" Height="600" Width="950">
     <Grid>
-        
+        <Rectangle Fill="#FFF4F4F5" Margin="132.4,73,131.6,99.8" Stroke="Black" RadiusX="150" RadiusY="150"/>
+        <Rectangle Fill="#FFF4F4F5" Margin="256,158.1,252,157.9" RadiusY="100" RadiusX="100" Stroke="Black"/>
+        <Image Source="./images/cancha.png" Margin="256,188.2,252,197"/>
     </Grid>
 </Window>
