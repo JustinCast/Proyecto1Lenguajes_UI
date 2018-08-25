@@ -8,7 +8,39 @@
         Title="Estadio Nacional" Height="600" Width="950">
     <Grid>
         <Rectangle Fill="#FFF4F4F5" Margin="132.4,73,131.6,99.8" Stroke="Black" RadiusX="150" RadiusY="150"/>
-        <Rectangle Fill="#FFF4F4F5" Margin="256,158.1,252,157.9" RadiusY="100" RadiusX="100" Stroke="Black"/>
-        <Image Source="./images/cancha.png" Margin="256,188.2,252,197"/>
+        <Rectangle Fill="#FFF4F4F5" Margin="253.6,134.5,254.4,157.9" RadiusY="100" RadiusX="100" Stroke="Black"/>
+        <Image Source="./images/cancha.png" Margin="328,192.3,332,192.9"/>
+        <Rectangle Fill="#FF0D0DDC" Height="58.1" Margin="265,0,382.778,102.2" Stroke="Black" StrokeThickness="0" StrokeMiterLimit="0" VerticalAlignment="Bottom" RenderTransformOrigin="1,1">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-43"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="1"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Fill="#FF0D0DDC" Height="58.1" Margin="297.4,74.9,350.378,0" Stroke="Black" StrokeThickness="0" StrokeMiterLimit="0" VerticalAlignment="Top" RenderTransformOrigin="1,1">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-43"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="1"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Grid HorizontalAlignment="Left" Margin="-572,171.2,0,192.9" Width="390.4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+        </Grid>
     </Grid>
 </Window>
