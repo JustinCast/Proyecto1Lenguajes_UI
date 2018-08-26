@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using Proyecto1Lenguajes_UI.usr.lib;
 
 namespace Proyecto1Lenguajes_UI
 {
@@ -26,7 +27,8 @@ namespace Proyecto1Lenguajes_UI
         public MainWindow()
         {
             InitializeComponent();
-            //ConnectLib();
+            //Class1.ConnectLib();
+            ConnectLib();
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -35,12 +37,12 @@ namespace Proyecto1Lenguajes_UI
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        /*[DllImport("main.dll", EntryPoint = "resolve_purchase_request")]
-        static extern void resolve_purchase_request(string category, int tickets);
+        [DllImport("C:\\Users\\Justin\\Documents\\Visual Studio 2017\\Projects\\DllTranslator\\Debug\\DllTranslator.dll", EntryPoint = "resolve_purchase_request")]
+        static extern void resolve_purchase_request(string category, int tickets, int flag);
         public static void ConnectLib()
         {
-            resolve_purchase_request("Platea", 10);
-        }*/
+            resolve_purchase_request("Platea", 10, 0);
+        }
     }
 
 }
