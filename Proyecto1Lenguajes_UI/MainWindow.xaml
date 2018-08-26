@@ -205,8 +205,9 @@
             <Button Grid.Column="8" Grid.Row="0" Content="19"/>
             <Button Grid.Column="9" Grid.Row="0" Content="20"/>
         </Grid>
-        <Image Source="./images/cancha.png" Margin="328.533,284.133,331.467,301.867"/>
-        <Grid Margin="293.733,518.333,294.533,217.067"  Height="35">
+        <Image Source="./images/cancha.jpg" Margin="268,232.933,268,283.734"/>
+        <Image Source="./images/casetilla.jpg" Margin="322.8,169.55,0,0" Height="63.383" VerticalAlignment="Top" HorizontalAlignment="Left" Width="84.4"/>
+        <Grid Margin="295.6,508.466,292.666,221.933"  Height="40">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
@@ -221,13 +222,14 @@
                 <ComboBoxItem Content="Platea Norte"/>
                 <ComboBoxItem Content="Tribuna"/>
             </ComboBox>
-            <TextBox PreviewTextInput="NumberValidationTextBox" MaxLength="2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Tag="Cantidad de boletos" Height="23"  TextWrapping="Wrap" Style="{StaticResource placeHolder}" VerticalAlignment="Bottom" Width="140" Margin="0,0,0,8.96"/>
-            <Button Style="{DynamicResource RoundCorner}" Grid.Row="0" Grid.Column="2" Margin="21.477,0,2.8,3.04" BorderThickness="1" RenderTransformOrigin="1,1">
+            <TextBox PreviewTextInput="NumberValidationTextBox" MaxLength="2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Tag="Cantidad de boletos" Height="23"  TextWrapping="Wrap" Style="{StaticResource placeHolder}" VerticalAlignment="Bottom" Width="140" Margin="0,0,0,10"/>
+            <Button Style="{DynamicResource RoundCorner}" Grid.Row="0" Grid.Column="2" Margin="20,0,0,10" BorderThickness="1" RenderTransformOrigin="1,1">
                 <StackPanel>
-                    <Image Source="./images/purchase.png" />
+                    <Image Source="./images/purchase.png" Margin="0,0,0,2" Height="25.222" />
                 </StackPanel>
             </Button>
         </Grid>
+        <Image Source="images/casetilla.jpg" Margin="0,164.55,335.867,0" Height="63.383" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84.4"/>
 
     </Grid>
 </Window>
