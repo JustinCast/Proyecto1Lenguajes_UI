@@ -28,7 +28,7 @@ namespace Proyecto1Lenguajes_UI
         {
             InitializeComponent();
             //Class1.ConnectLib();
-            //ConnectLib();
+            ConnectLib();
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -41,10 +41,10 @@ namespace Proyecto1Lenguajes_UI
             "C:\\Users\\Justin\\Documents\\Visual Studio 2017\\Projects\\DllTranslator\\Debug\\DllTranslator.dll",
             CallingConvention = CallingConvention.Cdecl,
             EntryPoint = "resolve_purchase_request")]
-        static extern void resolve_purchase_request(string category, int tickets, int flag);
+        static extern string resolve_purchase_request(string category, int tickets, int flag);
         public static void ConnectLib()
         {
-            resolve_purchase_request("Platea", 10, 0);
+            Console.WriteLine(resolve_purchase_request("Platea", 10, 0));
         }
 
         private void PurchaseClick(object sender, RoutedEventArgs e)
