@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using Proyecto1Lenguajes_UI.usr.lib;
+using System.Diagnostics;
 
 namespace Proyecto1Lenguajes_UI
 {
@@ -27,8 +28,7 @@ namespace Proyecto1Lenguajes_UI
         public MainWindow()
         {
             InitializeComponent();
-            //Class1.ConnectLib();
-            ConnectLib();
+            //ResolvePurchase();
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -37,19 +37,36 @@ namespace Proyecto1Lenguajes_UI
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        [DllImport(
-            "C:\\Users\\Justin\\Documents\\Visual Studio 2017\\Projects\\DllTranslator\\Debug\\DllTranslator.dll",
-            CallingConvention = CallingConvention.Cdecl,
-            EntryPoint = "resolve_purchase_request")]
-        static extern string resolve_purchase_request(string category, int tickets, int flag);
-        public static void ConnectLib()
+        private void ResolvePurchase()
         {
-            Console.WriteLine(resolve_purchase_request("Platea", 10, 0));
+            string fileName = "Proyecto1Lenguajes.exe";
+            string workingDirectory =
+                "C:\\Users\\Justin\\CLionProjects\\Proyecto1Lenguajes\\cmake-build-debug\\";
+
+            ProcessStartInfo info = new ProcessStartInfo();
+
+            info.UseShellExecute = true;
+            info.FileName = fileName;
+            info.WorkingDirectory = workingDirectory;
+            info.Arguments = 10 + " Platea";
+
+            Process.Start(info);
         }
 
         private void PurchaseClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Click");
+            string fileName = "Proyecto1Lenguajes.exe";
+            string workingDirectory =
+                "C:\\Users\\Justin\\CLionProjects\\Proyecto1Lenguajes\\cmake-build-debug\\";
+
+            ProcessStartInfo info = new ProcessStartInfo();
+
+            info.UseShellExecute = true;
+            info.FileName = fileName;
+            info.WorkingDirectory = workingDirectory;
+            info.Arguments = 10 + " Platea";
+
+            Process.Start(info);
         }
         private void SeatClick(object sender, RoutedEventArgs e)
         {

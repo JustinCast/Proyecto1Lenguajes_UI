@@ -107,8 +107,5 @@
   <ItemGroup>
     <Resource Include="images\casetilla.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="usr\lib\main.dll" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
