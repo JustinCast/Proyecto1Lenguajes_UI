@@ -9,7 +9,7 @@
     <Grid>
         <Rectangle Fill="#FFF4F4F5" Margin="253.6,134.5,254.4,157.9" RadiusY="100" RadiusX="100" Stroke="Black"/>
         <Rectangle Fill="#FFF4F4F5" Margin="132.4,73,131.6,99.8" Stroke="Black" RadiusX="150" RadiusY="150"/>
-      
+
         <Grid x:Name="PlateaSurGrid" HorizontalAlignment="Left" Margin="3.467,221.95,0,248.449" Width="390.4" Height="100" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
@@ -211,6 +211,7 @@
             </Button>
         </Grid>
         <Image Source="images/casetilla.jpg" Margin="0,169.55,317.467,0" Height="63.383" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84.4"/>
+        <Slider Value="10" x:Name="FilledSeats" HorizontalAlignment="Left" Margin="323,715,0,23.4" VerticalAlignment="Center" Height="32" Width="329" ValueChanged="FilledSeats_ValueChanged"/>
 
     </Grid>
 </Window>

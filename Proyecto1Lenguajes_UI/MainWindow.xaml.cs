@@ -29,6 +29,7 @@ namespace Proyecto1Lenguajes_UI
         {
             
             InitializeComponent();
+            SliderConfig();
             ReadFile();
         }
 
@@ -125,10 +126,27 @@ namespace Proyecto1Lenguajes_UI
                 }                  
         }
 
+        private void SliderConfig()
+        {
+            FilledSeats.Minimum = 10;
+            FilledSeats.Maximum = 20;
+        }
+
         private void SeatClick(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
             Console.WriteLine(button.Name);
+        }
+
+        private void FilledSeats_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            double distanceFromMin = (FilledSeats.Value - FilledSeats.Minimum);
+            double sliderRange = (FilledSeats.Maximum - FilledSeats.Minimum);
+            int sliderPercent = (int) (100 * (distanceFromMin / sliderRange));
+
+            int seats = sliderPercent * 20 / 100;
+
+            Console.WriteLine("Slider percentaje: " + seats);
         }
     }
 
