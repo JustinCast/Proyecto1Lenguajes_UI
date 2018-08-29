@@ -9,26 +9,7 @@
     <Grid>
         <Rectangle Fill="#FFF4F4F5" Margin="253.6,134.5,254.4,157.9" RadiusY="100" RadiusX="100" Stroke="Black"/>
         <Rectangle Fill="#FFF4F4F5" Margin="132.4,73,131.6,99.8" Stroke="Black" RadiusX="150" RadiusY="150"/>
-        <Rectangle Fill="#FF0D0DDC" Height="58.1" Margin="265,0,382.778,102.2" Stroke="Black" StrokeThickness="0" StrokeMiterLimit="0" VerticalAlignment="Bottom" RenderTransformOrigin="1,1">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-43"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="1"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Rectangle Fill="#FF0D0DDC" Height="58.1" Margin="297.4,74.9,350.378,0" Stroke="Black" StrokeThickness="0" StrokeMiterLimit="0" VerticalAlignment="Top" RenderTransformOrigin="1,1">
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-43"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="1"/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
+      
         <Grid x:Name="PlateaSurGrid" HorizontalAlignment="Left" Margin="3.467,221.95,0,248.449" Width="390.4" Height="100" RenderTransformOrigin="0.5,0.5">
             <Grid.RenderTransform>
                 <TransformGroup>
@@ -54,27 +35,27 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Button x:Name="ps_1" Grid.Column="0" Grid.Row="2" Content="1" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_2" Grid.Column="1" Grid.Row="2" Content="2" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_3" Grid.Column="2" Grid.Row="2" Content="3" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_4" Grid.Column="3" Grid.Row="2" Content="4" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_5" Grid.Column="4" Grid.Row="2" Content="5" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_6" Grid.Column="5" Grid.Row="2" Content="6" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_7" Grid.Column="6" Grid.Row="2" Content="7" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_8" Grid.Column="7" Grid.Row="2" Content="8" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_9" Grid.Column="8" Grid.Row="2" Content="9" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_10" Grid.Column="9" Grid.Row="2" Content="10" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="ps_1" Grid.Column="0" Grid.Row="2" Content="1" Click="SeatClick"/>
+            <Button x:Name="ps_2" Grid.Column="1" Grid.Row="2" Content="2" Click="SeatClick"/>
+            <Button x:Name="ps_3" Grid.Column="2" Grid.Row="2" Content="3" Click="SeatClick"/>
+            <Button x:Name="ps_4" Grid.Column="3" Grid.Row="2" Content="4" Click="SeatClick"/>
+            <Button x:Name="ps_5" Grid.Column="4" Grid.Row="2" Content="5" Click="SeatClick"/>
+            <Button x:Name="ps_6" Grid.Column="5" Grid.Row="2" Content="6" Click="SeatClick"/>
+            <Button x:Name="ps_7" Grid.Column="6" Grid.Row="2" Content="7" Click="SeatClick"/>
+            <Button x:Name="ps_8" Grid.Column="7" Grid.Row="2" Content="8" Click="SeatClick"/>
+            <Button x:Name="ps_9" Grid.Column="8" Grid.Row="2" Content="9" Click="SeatClick"/>
+            <Button x:Name="ps_10" Grid.Column="9" Grid.Row="2" Content="10" Click="SeatClick"/>
 
-            <Button x:Name="ps_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_15" Grid.Column="4" Grid.Row="0" Content="15" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_16" Grid.Column="5" Grid.Row="0" Content="16" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_17" Grid.Column="6" Grid.Row="0" Content="17" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_18" Grid.Column="7" Grid.Row="0" Content="18" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_19" Grid.Column="8" Grid.Row="0" Content="19" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="ps_20" Grid.Column="9" Grid.Row="0" Content="20" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="ps_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick"/>
+            <Button x:Name="ps_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick"/>
+            <Button x:Name="ps_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick"/>
+            <Button x:Name="ps_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick"/>
+            <Button x:Name="ps_15" Grid.Column="4" Grid.Row="0" Content="15" Click="SeatClick"/>
+            <Button x:Name="ps_16" Grid.Column="5" Grid.Row="0" Content="16" Click="SeatClick"/>
+            <Button x:Name="ps_17" Grid.Column="6" Grid.Row="0" Content="17" Click="SeatClick"/>
+            <Button x:Name="ps_18" Grid.Column="7" Grid.Row="0" Content="18" Click="SeatClick"/>
+            <Button x:Name="ps_19" Grid.Column="8" Grid.Row="0" Content="19" Click="SeatClick"/>
+            <Button x:Name="ps_20" Grid.Column="9" Grid.Row="0" Content="20" Click="SeatClick"/>
         </Grid>
 
         <Grid x:Name="PlateaGrid" Margin="277.067,0,276.133,99.8" Height="100" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom">
@@ -94,27 +75,27 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Button x:Name="p_1" Grid.Column="0" Grid.Row="2" Content="1" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_2" Grid.Column="1" Grid.Row="2" Content="2" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_3" Grid.Column="2" Grid.Row="2" Content="3" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_4" Grid.Column="3" Grid.Row="2" Content="4" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_5" Grid.Column="4" Grid.Row="2" Content="5" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_6" Grid.Column="5" Grid.Row="2" Content="6" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_7" Grid.Column="6" Grid.Row="2" Content="7" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_8" Grid.Column="7" Grid.Row="2" Content="8" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_9" Grid.Column="8" Grid.Row="2" Content="9" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_10" Grid.Column="9" Grid.Row="2" Content="10" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="p_1" Grid.Column="0" Grid.Row="2" Content="1" Click="SeatClick"/>
+            <Button x:Name="p_2" Grid.Column="1" Grid.Row="2" Content="2" Click="SeatClick"/>
+            <Button x:Name="p_3" Grid.Column="2" Grid.Row="2" Content="3" Click="SeatClick"/>
+            <Button x:Name="p_4" Grid.Column="3" Grid.Row="2" Content="4" Click="SeatClick"/>
+            <Button x:Name="p_5" Grid.Column="4" Grid.Row="2" Content="5" Click="SeatClick"/>
+            <Button x:Name="p_6" Grid.Column="5" Grid.Row="2" Content="6" Click="SeatClick"/>
+            <Button x:Name="p_7" Grid.Column="6" Grid.Row="2" Content="7" Click="SeatClick"/>
+            <Button x:Name="p_8" Grid.Column="7" Grid.Row="2" Content="8" Click="SeatClick"/>
+            <Button x:Name="p_9" Grid.Column="8" Grid.Row="2" Content="9" Click="SeatClick"/>
+            <Button x:Name="p_10" Grid.Column="9" Grid.Row="2" Content="10" Click="SeatClick"/>
 
-            <Button x:Name="p_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_15" Grid.Column="4" Grid.Row="0" Content="15" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_16" Grid.Column="5" Grid.Row="0" Content="16" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_17" Grid.Column="6" Grid.Row="0" Content="17" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_18" Grid.Column="7" Grid.Row="0" Content="18" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_19" Grid.Column="8" Grid.Row="0" Content="19" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="p_20" Grid.Column="9" Grid.Row="0" Content="20" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="p_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick"/>
+            <Button x:Name="p_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick"/>
+            <Button x:Name="p_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick"/>
+            <Button x:Name="p_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick"/>
+            <Button x:Name="p_15" Grid.Column="4" Grid.Row="0" Content="15" Click="SeatClick"/>
+            <Button x:Name="p_16" Grid.Column="5" Grid.Row="0" Content="16" Click="SeatClick"/>
+            <Button x:Name="p_17" Grid.Column="6" Grid.Row="0" Content="17" Click="SeatClick"/>
+            <Button x:Name="p_18" Grid.Column="7" Grid.Row="0" Content="18" Click="SeatClick"/>
+            <Button x:Name="p_19" Grid.Column="8" Grid.Row="0" Content="19" Click="SeatClick"/>
+            <Button x:Name="p_20" Grid.Column="9" Grid.Row="0" Content="20" Click="SeatClick"/>
         </Grid>
 
         <Grid x:Name="TribunaGrid"  Margin="277.067,59.55,276.133,0" Height="100" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
@@ -135,27 +116,27 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Button x:Name="t_1" Grid.Column="0" Grid.Row="1" Content="1" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_2" Grid.Column="1" Grid.Row="1" Content="2" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_3" Grid.Column="2" Grid.Row="1" Content="3" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_4" Grid.Column="3" Grid.Row="1" Content="4" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_5" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Content="5" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_6" Grid.Column="6" Grid.Row="1" Content="6" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_7" Grid.Column="7" Grid.Row="1" Content="7" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_8" Grid.Column="8" Grid.Row="1" Content="8" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_9" Grid.Column="9" Grid.Row="1" Content="9" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_10" Grid.Column="10" Grid.Row="1" Content="10" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="t_1" Grid.Column="0" Grid.Row="1" Content="1" Click="SeatClick"/>
+            <Button x:Name="t_2" Grid.Column="1" Grid.Row="1" Content="2" Click="SeatClick"/>
+            <Button x:Name="t_3" Grid.Column="2" Grid.Row="1" Content="3" Click="SeatClick"/>
+            <Button x:Name="t_4" Grid.Column="3" Grid.Row="1" Content="4" Click="SeatClick"/>
+            <Button x:Name="t_5" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Content="5" Click="SeatClick"/>
+            <Button x:Name="t_6" Grid.Column="6" Grid.Row="1" Content="6" Click="SeatClick"/>
+            <Button x:Name="t_7" Grid.Column="7" Grid.Row="1" Content="7" Click="SeatClick"/>
+            <Button x:Name="t_8" Grid.Column="8" Grid.Row="1" Content="8" Click="SeatClick"/>
+            <Button x:Name="t_9" Grid.Column="9" Grid.Row="1" Content="9" Click="SeatClick"/>
+            <Button x:Name="t_10" Grid.Column="10" Grid.Row="1" Content="10" Click="SeatClick"/>
 
-            <Button x:Name="t_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_15" Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" Content="15" IsEnabled="False"/>
-            <Button x:Name="t_16" Grid.Column="6" Grid.Row="0" Content="16" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_17" Grid.Column="7" Grid.Row="0" Content="17" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_18" Grid.Column="8" Grid.Row="0" Content="18" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_19" Grid.Column="9" Grid.Row="0" Content="19" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="t_20" Grid.Column="10" Grid.Row="0" Content="20" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="t_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick"/>
+            <Button x:Name="t_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick"/>
+            <Button x:Name="t_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick"/>
+            <Button x:Name="t_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick"/>
+            <Button x:Name="t_15" Grid.Column="4" Grid.Row="0" Grid.ColumnSpan="2" Content="15"/>
+            <Button x:Name="t_16" Grid.Column="6" Grid.Row="0" Content="16" Click="SeatClick"/>
+            <Button x:Name="t_17" Grid.Column="7" Grid.Row="0" Content="17" Click="SeatClick"/>
+            <Button x:Name="t_18" Grid.Column="8" Grid.Row="0" Content="18" Click="SeatClick"/>
+            <Button x:Name="t_19" Grid.Column="9" Grid.Row="0" Content="19" Click="SeatClick"/>
+            <Button x:Name="t_20" Grid.Column="10" Grid.Row="0" Content="20" Click="SeatClick"/>
         </Grid>
 
         <Grid x:Name="PlateaNorteGrid" HorizontalAlignment="Right" Margin="0,221.95,11.333,248.449" Width="390.4" Height="100" RenderTransformOrigin="0.5,0.5">
@@ -183,27 +164,27 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <Button x:Name="tn_1" Grid.Column="0" Grid.Row="2" Content="1" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_2" Grid.Column="1" Grid.Row="2" Content="2" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_3" Grid.Column="2" Grid.Row="2" Content="3" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_4" Grid.Column="3" Grid.Row="2" Content="4" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_5" Grid.Column="4" Grid.Row="2" Content="5" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_6" Grid.Column="5" Grid.Row="2" Content="6" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_7" Grid.Column="6" Grid.Row="2" Content="7" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_8" Grid.Column="7" Grid.Row="2" Content="8" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_9" Grid.Column="8" Grid.Row="2" Content="9" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_10" Grid.Column="9" Grid.Row="2" Content="10" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="tn_1" Grid.Column="0" Grid.Row="2" Content="1" Click="SeatClick"/>
+            <Button x:Name="tn_2" Grid.Column="1" Grid.Row="2" Content="2" Click="SeatClick"/>
+            <Button x:Name="tn_3" Grid.Column="2" Grid.Row="2" Content="3" Click="SeatClick"/>
+            <Button x:Name="tn_4" Grid.Column="3" Grid.Row="2" Content="4" Click="SeatClick"/>
+            <Button x:Name="tn_5" Grid.Column="4" Grid.Row="2" Content="5" Click="SeatClick"/>
+            <Button x:Name="tn_6" Grid.Column="5" Grid.Row="2" Content="6" Click="SeatClick"/>
+            <Button x:Name="tn_7" Grid.Column="6" Grid.Row="2" Content="7" Click="SeatClick"/>
+            <Button x:Name="tn_8" Grid.Column="7" Grid.Row="2" Content="8" Click="SeatClick"/>
+            <Button x:Name="tn_9" Grid.Column="8" Grid.Row="2" Content="9" Click="SeatClick"/>
+            <Button x:Name="tn_10" Grid.Column="9" Grid.Row="2" Content="10" Click="SeatClick"/>
 
-            <Button x:Name="tn_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_15" Grid.Column="4" Grid.Row="0" Content="15" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_16" Grid.Column="5" Grid.Row="0" Content="16" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_17" Grid.Column="6" Grid.Row="0" Content="17" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_18" Grid.Column="7" Grid.Row="0" Content="18" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_19" Grid.Column="8" Grid.Row="0" Content="19" Click="SeatClick" IsEnabled="False"/>
-            <Button x:Name="tn_20" Grid.Column="9" Grid.Row="0" Content="20" Click="SeatClick" IsEnabled="False"/>
+            <Button x:Name="tn_11" Grid.Column="0" Grid.Row="0" Content="11" Click="SeatClick"/>
+            <Button x:Name="tn_12" Grid.Column="1" Grid.Row="0" Content="12" Click="SeatClick"/>
+            <Button x:Name="tn_13" Grid.Column="2" Grid.Row="0" Content="13" Click="SeatClick"/>
+            <Button x:Name="tn_14" Grid.Column="3" Grid.Row="0" Content="14" Click="SeatClick"/>
+            <Button x:Name="tn_15" Grid.Column="4" Grid.Row="0" Content="15" Click="SeatClick"/>
+            <Button x:Name="tn_16" Grid.Column="5" Grid.Row="0" Content="16" Click="SeatClick"/>
+            <Button x:Name="tn_17" Grid.Column="6" Grid.Row="0" Content="17" Click="SeatClick"/>
+            <Button x:Name="tn_18" Grid.Column="7" Grid.Row="0" Content="18" Click="SeatClick"/>
+            <Button x:Name="tn_19" Grid.Column="8" Grid.Row="0" Content="19" Click="SeatClick"/>
+            <Button x:Name="tn_20" Grid.Column="9" Grid.Row="0" Content="20" Click="SeatClick"/>
         </Grid>
         <Image Source="./images/cancha.jpg" Margin="268,232.933,268,283.734"/>
         <Image Source="./images/casetilla.jpg" Margin="322.8,169.55,0,0" Height="63.383" VerticalAlignment="Top" HorizontalAlignment="Left" Width="84.4"/>

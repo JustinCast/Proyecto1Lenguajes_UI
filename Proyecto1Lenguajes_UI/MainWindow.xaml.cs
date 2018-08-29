@@ -29,7 +29,7 @@ namespace Proyecto1Lenguajes_UI
         {
             
             InitializeComponent();
-            //ReadFile();
+            ReadFile();
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -66,7 +66,6 @@ namespace Proyecto1Lenguajes_UI
             info.FileName = fileName;
             info.WorkingDirectory = workingDirectory;
             info.Arguments = 10 + " Platea";
-            ReadFile();
 
             Process.Start(info);
         }
@@ -81,7 +80,8 @@ namespace Proyecto1Lenguajes_UI
             while ((line = file.ReadLine()) != null)
             {
                 string[] result = line.Split(':');
-                FillCategory(result[0]);
+                Console.WriteLine("Result[0]: {0}\nResult[1]: {1}", result[0], result[1]);
+                ManageCategory(result[0], result[1]);
             }
             file.Close();
 
@@ -90,20 +90,39 @@ namespace Proyecto1Lenguajes_UI
 
         }
 
-        private void FillCategory(string category)
+        private void ManageCategory(string category, string seats)
         {
             switch(category)
             {
                 case "Platea":
+                    FillCategory(PlateaGrid, seats);
                     break;
                 case "Platea Sur":
+                    FillCategory(PlateaSurGrid, seats);
                     break;
                 case "Platea Norte":
+                    FillCategory(PlateaNorteGrid, seats);
                     break;
                 case "Tribuna":
+                    FillCategory(TribunaGrid, seats);
                     break;
                 default: break;
             }
+        }
+
+        private void FillCategory(Grid grid, string s)
+        {
+            string[] seats = s.Split('-');
+            string[] btnNameSplitted;
+            for (int index = 0; index < grid.Children.Count; index++)
+                for (int i = 0; i < seats.Length; i++)
+                {
+                    btnNameSplitted = (grid.Children[index] as Button).Name.Split('_');
+                    if (seats[i].Equals(btnNameSplitted[1]))
+                    {                     
+                        (grid.Children[index] as Button).Background = Brushes.Blue;
+                    }
+                }                  
         }
 
         private void SeatClick(object sender, RoutedEventArgs e)
