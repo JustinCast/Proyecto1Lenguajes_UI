@@ -28,7 +28,7 @@ namespace Proyecto1Lenguajes_UI
         public MainWindow()
         {
             InitializeComponent();
-            ReadFile();
+            //ReadFile();
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
