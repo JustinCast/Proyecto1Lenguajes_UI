@@ -27,6 +27,7 @@ namespace Proyecto1Lenguajes_UI
     {
         public MainWindow()
         {
+            
             InitializeComponent();
             //ReadFile();
         }
@@ -65,19 +66,44 @@ namespace Proyecto1Lenguajes_UI
             info.FileName = fileName;
             info.WorkingDirectory = workingDirectory;
             info.Arguments = 10 + " Platea";
+            ReadFile();
 
             Process.Start(info);
         }
 
         private void ReadFile()
         {
-            string text = 
-                System.IO.File.ReadAllText(
+            System.IO.StreamReader file =
+                new System.IO.StreamReader(
                     @"C:\Users\Justin\CLionProjects\Proyecto1Lenguajes\cmake-build-debug\result.txt");
+            string line;
+
+            while ((line = file.ReadLine()) != null)
+            {
+                string[] result = line.Split(':');
+                FillCategory(result[0]);
+            }
+            file.Close();
 
             // Display the file contents to the console. Variable text is a string.
-            System.Console.WriteLine("Contents of WriteText.txt = {0}", text);
+            //System.Console.WriteLine("Contents of WriteText.txt = {0}", text);
 
+        }
+
+        private void FillCategory(string category)
+        {
+            switch(category)
+            {
+                case "Platea":
+                    break;
+                case "Platea Sur":
+                    break;
+                case "Platea Norte":
+                    break;
+                case "Tribuna":
+                    break;
+                default: break;
+            }
         }
 
         private void SeatClick(object sender, RoutedEventArgs e)
