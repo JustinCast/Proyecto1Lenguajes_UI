@@ -28,7 +28,7 @@ namespace Proyecto1Lenguajes_UI
         public MainWindow()
         {
             InitializeComponent();
-            //ResolvePurchase();
+            ReadFile();
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -68,6 +68,18 @@ namespace Proyecto1Lenguajes_UI
 
             Process.Start(info);
         }
+
+        private void ReadFile()
+        {
+            string text = 
+                System.IO.File.ReadAllText(
+                    @"C:\Users\Justin\CLionProjects\Proyecto1Lenguajes\cmake-build-debug\result.txt");
+
+            // Display the file contents to the console. Variable text is a string.
+            System.Console.WriteLine("Contents of WriteText.txt = {0}", text);
+
+        }
+
         private void SeatClick(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
