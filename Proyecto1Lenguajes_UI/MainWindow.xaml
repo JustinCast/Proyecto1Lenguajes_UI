@@ -212,7 +212,6 @@
         </Grid>
         <Image Source="images/casetilla.jpg" Margin="0,169.55,317.467,0" Height="63.383" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84.4"/>
         <Slider Value="10" x:Name="FilledSeats" HorizontalAlignment="Left" Margin="323,715,0,23.4" VerticalAlignment="Center" Height="32" Width="329" ValueChanged="FilledSeats_ValueChanged"/>
-        <Button x:Name="PreFillSeats" Content="Rellenar" HorizontalAlignment="Left" Margin="692,715,0,0" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="Percentage" Content="{Binding ElementName=FilledSeats, Path=Value, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="470,689,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="PreFillCategoriesCmbx" HorizontalAlignment="Left" Margin="170,715,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Platea"/>
@@ -220,6 +219,7 @@
             <ComboBoxItem Content="Norte"/>
             <ComboBoxItem Content="Tribuna"/>
         </ComboBox>
+        <CheckBox x:Name="PreFillSeats" Content="Rellenar" HorizontalAlignment="Left" Margin="678,715,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

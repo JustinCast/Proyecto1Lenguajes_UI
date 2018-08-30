@@ -6,6 +6,7 @@ using System.Windows.Media;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading;
+using System.IO;
 
 namespace Proyecto1Lenguajes_UI
 {
@@ -42,7 +43,10 @@ namespace Proyecto1Lenguajes_UI
             info.UseShellExecute = true;
             info.FileName = fileName;
             info.WorkingDirectory = workingDirectory;
-            info.Arguments = tickets + " " + CategoryCmbx.Text + " " + Percentage.Content + " " + PreFillCategoriesCmbx.Text;
+            if((bool) PreFillSeats.IsChecked)
+                info.Arguments = tickets + " " + CategoryCmbx.Text + " " + Percentage.Content + " " + PreFillCategoriesCmbx.Text;
+            else
+                info.Arguments = tickets + " " + CategoryCmbx.Text +" " + 0 + " " + "Platea";
 
             var process = Process.Start(info);
             while (!process.HasExited && process.Responding)
@@ -63,9 +67,9 @@ namespace Proyecto1Lenguajes_UI
             while ((line = file.ReadLine()) != null)
             {
                 string[] result = line.Split(':');
-                Console.WriteLine("Result[0]: {0}\nResult[1]: {1}", result[0], result[1]);
                 ManageCategory(result[0], result[1]);
             }
+            
             file.Close();        
         }
 
