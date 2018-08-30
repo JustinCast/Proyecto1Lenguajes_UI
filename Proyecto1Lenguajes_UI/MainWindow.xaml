@@ -197,13 +197,13 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-            <ComboBox Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Margin="0,0,0,10">
+            <ComboBox x:Name="CategoryCmbx" Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom" Margin="0,0,0,10">
                 <ComboBoxItem Content="Platea"/>
-                <ComboBoxItem Content="Platea Sur"/>
-                <ComboBoxItem Content="Platea Norte"/>
+                <ComboBoxItem Content="Sur"/>
+                <ComboBoxItem Content="Norte"/>
                 <ComboBoxItem Content="Tribuna"/>
             </ComboBox>
-            <TextBox PreviewTextInput="NumberValidationTextBox" MaxLength="2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Tag="Cantidad de boletos" Height="23"  TextWrapping="Wrap" Style="{StaticResource placeHolder}" VerticalAlignment="Bottom" Width="140" Margin="0,0,0,10"/>
+            <TextBox x:Name="TicketsCuantity" PreviewTextInput="NumberValidationTextBox" MaxLength="2" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Tag="Cantidad de boletos" Height="23"  TextWrapping="Wrap" Style="{StaticResource placeHolder}" VerticalAlignment="Bottom" Width="140" Margin="0,0,0,10"/>
             <Button Style="{DynamicResource RoundCorner}" Grid.Row="0" Grid.Column="2" Margin="20,0,0,10" BorderThickness="1" RenderTransformOrigin="1,1" Click="PurchaseClick">
                 <StackPanel>
                     <Image Source="./images/purchase.png" Margin="0,0,0,2" Height="25.222" />
@@ -212,6 +212,14 @@
         </Grid>
         <Image Source="images/casetilla.jpg" Margin="0,169.55,317.467,0" Height="63.383" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84.4"/>
         <Slider Value="10" x:Name="FilledSeats" HorizontalAlignment="Left" Margin="323,715,0,23.4" VerticalAlignment="Center" Height="32" Width="329" ValueChanged="FilledSeats_ValueChanged"/>
+        <Button x:Name="PreFillSeats" Content="Rellenar" HorizontalAlignment="Left" Margin="692,715,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="Percentage" Content="{Binding ElementName=FilledSeats, Path=Value, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="470,689,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="PreFillCategoriesCmbx" HorizontalAlignment="Left" Margin="170,715,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Platea"/>
+            <ComboBoxItem Content="Sur"/>
+            <ComboBoxItem Content="Norte"/>
+            <ComboBoxItem Content="Tribuna"/>
+        </ComboBox>
 
     </Grid>
 </Window>

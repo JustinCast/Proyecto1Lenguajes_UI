@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
-using Proyecto1Lenguajes_UI.usr.lib;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Proyecto1Lenguajes_UI
 {
@@ -30,7 +20,7 @@ namespace Proyecto1Lenguajes_UI
             
             InitializeComponent();
             SliderConfig();
-            ReadFile();
+            //ReadFile();
         }
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
@@ -39,36 +29,28 @@ namespace Proyecto1Lenguajes_UI
             e.Handled = regex.IsMatch(e.Text);
         }
 
-        private void ResolvePurchase()
-        {
-            string fileName = "Proyecto1Lenguajes.exe";
-            string workingDirectory =
-                "C:\\Users\\Justin\\CLionProjects\\Proyecto1Lenguajes\\cmake-build-debug\\";
-
-            ProcessStartInfo info = new ProcessStartInfo();
-
-            info.UseShellExecute = true;
-            info.FileName = fileName;
-            info.WorkingDirectory = workingDirectory;
-            info.Arguments = 10 + " Platea";
-
-            Process.Start(info);
-        }
-
         private void PurchaseClick(object sender, RoutedEventArgs e)
         {
             string fileName = "Proyecto1Lenguajes.exe";
             string workingDirectory =
                 "C:\\Users\\Justin\\CLionProjects\\Proyecto1Lenguajes\\cmake-build-debug\\";
+            int tickets;
+            int.TryParse(TicketsCuantity.Text, out tickets);
 
             ProcessStartInfo info = new ProcessStartInfo();
-
+           
             info.UseShellExecute = true;
             info.FileName = fileName;
             info.WorkingDirectory = workingDirectory;
-            info.Arguments = 10 + " Platea";
+            info.Arguments = tickets + " " + CategoryCmbx.Text + " " + Percentage.Content + " " + PreFillCategoriesCmbx.Text;
 
-            Process.Start(info);
+            var process = Process.Start(info);
+            while (!process.HasExited && process.Responding)
+            {
+                Thread.Sleep(100);
+            }
+            if(process.HasExited)
+                ReadFile();
         }
 
         private void ReadFile()
@@ -84,11 +66,7 @@ namespace Proyecto1Lenguajes_UI
                 Console.WriteLine("Result[0]: {0}\nResult[1]: {1}", result[0], result[1]);
                 ManageCategory(result[0], result[1]);
             }
-            file.Close();
-
-            // Display the file contents to the console. Variable text is a string.
-            //System.Console.WriteLine("Contents of WriteText.txt = {0}", text);
-
+            file.Close();        
         }
 
         private void ManageCategory(string category, string seats)
@@ -98,10 +76,10 @@ namespace Proyecto1Lenguajes_UI
                 case "Platea":
                     FillCategory(PlateaGrid, seats);
                     break;
-                case "Platea Sur":
+                case "Sur":
                     FillCategory(PlateaSurGrid, seats);
                     break;
-                case "Platea Norte":
+                case "Norte":
                     FillCategory(PlateaNorteGrid, seats);
                     break;
                 case "Tribuna":
@@ -129,7 +107,7 @@ namespace Proyecto1Lenguajes_UI
         private void SliderConfig()
         {
             FilledSeats.Minimum = 10;
-            FilledSeats.Maximum = 20;
+            FilledSeats.Maximum = 15;
         }
 
         private void SeatClick(object sender, RoutedEventArgs e)
@@ -144,8 +122,7 @@ namespace Proyecto1Lenguajes_UI
             double sliderRange = (FilledSeats.Maximum - FilledSeats.Minimum);
             int sliderPercent = (int) (100 * (distanceFromMin / sliderRange));
 
-            int seats = sliderPercent * 20 / 100;
-
+            int seats = sliderPercent * 15 / 100;
             Console.WriteLine("Slider percentaje: " + seats);
         }
     }
